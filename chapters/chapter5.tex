@@ -81,42 +81,82 @@
 \end{enumerate}
 
 
-\section{Desired/necessary knowledge}
+\section{Obtaining the desired knowledge}
 \label{chapter5:desired_knowledge}
-The following list is a short summary of the knowledge needed to ensure completion of the master thesis:
-\begin{itemize}
-	\item Understand how the Open Edx system works
-	\item Understand how the StackExchange API (and community) works
-	\item Be able to create an functional hybrid algorithm based on \gls{hmm} and \gls{bn} that can:
-	\begin{itemize}
-		\item Convert user input to a query format
-		\item Be able to communicate with external resources (e.g. WordNET, StackExchange)
-		\item Be able to use this query format to retrieve data from the StackExchange community site
-		\item Process the retrieved data to only select the results that are relevant for the user
-		\item 
-	\end{itemize}
-	\item 
-	\item 
-	\item 
-\end{itemize}
-
-%% update this part after experiment is conducted
-\emph{This part will be updated after user testing:} \\
-To get an early start, a prototype was developed in the course IMT5251 Advanced Project Work. To also have the ability to get user feedback and check if the current survey is good enough, students from the 1. and 2. year learning programming at \gls{guc} were invited to test the prototype\ldots 
+The most important key element in this thesis will be the development of the Chat Agent, since it is the focus of my thesis. Preliminary work has already been done in the course 
+IMT5251 Advanced Project Work, where the prototype is under development. The prototype runs in Open Edx, as an XBlock. Put shortly, the XBlock runs as an Fragment in Open Edx, 
+allowing developers to add their own content which then can be re-used in multiple systems\footnote{For more on XBlock, see 
+\url{http://edx.readthedocs.org/projects/xblock-tutorial/en/latest/overview/index.html}}. As previously mentioned, the prototype developed is a simplistic version, meaning there is no 
+\gls{ai}. The prototype will simply take the users input (the question) and copy/paste it to search for matching questions on StackOverflow. It will then return the first result, where 
+the answer the user is presented with will either be the answer marked as correct, or the top-voted answer (if no answer is selected as correct by original poster). Students from the 
+1. and 2. year (who are learning to program) will test the prototype in the beginning of December, and afterwards fill out a survey about this experience (this survey can be seen in 
+ Appendix \ref{appendix:survey}). In addition, some will test it out in the data lab while I observe them, and afterwards they will take part in an interview (the interview format can be 
+see Appendix \ref{appendix:interview}).
+\vspace{0.5em}\newline
+This means that most of the development needed during the master thesis will be to implement the \gls{ai} and for it to be able to use WordNET for semantics. This would probably take 
+a whole calendar month, but it depends on the actual hours invested. If I work between 6-8 hours each day (40+ hours each week), then this should be at least operational at latest 
+mid-February. The reason for this extended time is to ensure I have time to setup and test the \gls{ai} properly before allowing students to test them to ensure the collected data is 
+valid. When it comes to equipment, I already have most of what I need, since I am already working on the prototype (development is done in Arch Linux). I also have a USB stick 
+with Arch Linux installed, so that I can work on my laptop in case something should happen to my Desktop. I have also acquired a student license for PyCharm Professional\footnote{
+PyCharm: \url{https://www.jetbrains.com/pycharm/}.} which is valid for 1 year (until 25. November 2016). I am also aware of people that have the required knowledge who I can ask for 
+help, such as my supervisor Simon McCallum, Sule Yildirim-Yayilgan, Mariusz Nowostawski and Rune Hjelsvold. 
+\vspace{0.5em}\newline
+The user testing will of course require students to be willing to partake and test the Chat Agent. The plan is to use A/B testing, so that only part of the students have access to and 
+can use this Chat Agent. One thing that may affect the end results are the knowledge level of the users, which means that even if there is an increase in the end results, it may not 
+be because of the Chat Agent. The solution to account for this issue is by having the users also grade their own knowledge level, from being novice to expert (e.g. having programmed 
+for years). Although there is not a set time limit for required use, if the Chat Agent is not in use, there will not be enough test data. However, the Chat Agent will be available from 
+around February to May, and participation may not be that high if there is a weekly requirement for usage. A solution could be to require the participants to at least use the Chat Agent 
+for at least 10-20 hours each calendar month. If there then are 20-30 participants, that means the Chat Agent will have a usage of 200-600 hours each month. Which in turn should provide 
+a good amount of test data. There will be at least three surveys for the participants, the first when they start using the Chat Agent, the second when testing is halfway and the last 
+at the end, to see if there is a correlation between usage, their results and the students own observations.
 
 \section{Produced deliverables}
 \label{chapter5:produced_deliverables}
 
-What deliverables are to be produced (MSc thesis report, software,...)
-
-For each of the activities identified, specify \\
-	1. the time you need to complete each activity both calendar time and 'man-hours'.  \\
-	2. hours needed by you \\ 
-	3. things you need to buy (consumables) \\
-	4. equipment, lab space or facilities you need access to \\
-	5. contributions from others (e.g. survey/interview participants) and how much each will have to contribute in terms of resources (probably time)
-
-\section{Availability of deliverables}
-\label{chapter5:availability_deliverables}
-
-When are the various deliverables going to be available?
+\subsection{Hours needed by me}
+\label{chapter5:hours_needed_by_me}
+\begin{center}
+	\begin{tabular}{| p{4cm} | p{2.5cm} | l |  l | p{4cm} |}
+		\hline
+		Product & Time (calendar) & Time ('man-hours')\footnotemark & Version \# & Notes  \\
+		\hline
+		MSc thesis report & January - May & 125-200 Hours & v0.1 & Draft should be presented to supervisor monthly \\ 
+		\hline
+		1) Chat Agent \newline (\gls{ai} research) & January - \newline February & 50-75 Hours & v0.1 &  Should be available at \newline latest Mid-February for 
+		\newline course start-up \\ 
+		\hline
+		2) Chat Agent \newline (\gls{ai} development) & January -\newline  February & 50-75 Hours & v0.1 & Should be available at \newline latest Mid-February for 
+		\newline course start-up \\ 
+		\hline
+		Meeting w/ supervisor & January - May & 10-20 Hours & v0.1 & Once a week, estimated between 30-60 minutes \\ 
+		\hline
+		Analyse questions \newline on StackExchange & February - May & 50-100 Hours & v0.1 & One way of doing this \newline would be to use the 
+		\newline Chat Agent to e.g. \newline retrieve questions \newline that are closed \\ 
+		\hline
+		Read various scientific \newline papers & January - May & 50-100 Hours & v0.1 & Read up on the latest \newline published papers to keep up-to-date \\ 
+		\hline
+		Process student surveys & Jan/Feb, March/April and April/May & 10-30 Hours & v0.1 & Surveys delivered by \newline students participating in \newline the A/B Testing \\ 
+		\hline
+		Process Student/ \newline Chat Agent interactions & February - May & 60-80 Hours & v0.1 & Should at least try to 
+		\newline keep a steady update on \newline the current data on \newline a weekly basis \\ 
+		\hline
+	\end{tabular}
+\end{center}
+\footnotetext{Total time spent during set period.} 
+	
+\subsection{Hours by others}
+\label{chapter5:hours_needed_by_others}
+\begin{center}
+	\begin{tabular}[H]{| p{4cm} | p{2.5cm} | l |  l | p{4cm}|}
+		\hline
+		Who? & Time (calendar) & Time ('man-hours')\footnotemark & Version \# & Notes  \\
+		\hline
+		Supervisor & January-May & 10-20 Hours & v0.1 & Once a week, \newline estimated between \newline 30-60 minutes \\ 
+		\hline
+		Students & February-April/May & 40-80 Hours & v0.1 & Students interaction \newline with the Chat Agent \newline (time per person) \\ 
+		\hline
+		Students & Jan/Feb, March/April and April/May & 1.5 - 3 hours & v0.1 & Filling out survey/ \newline questionnaire \newline (per student) \\ 
+		\hline
+	\end{tabular}
+\end{center}
+\footnotetext{Total time spent during set period.} 
