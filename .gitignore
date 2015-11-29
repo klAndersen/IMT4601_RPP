@@ -137,3 +137,5 @@ chapters/chapter9.tex
 appendix
 header
 src
+*.bib
+chapters/rev_history.tex
