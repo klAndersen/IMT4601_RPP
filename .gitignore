@@ -129,3 +129,5 @@ sympy-plots-for-*.tex/
 src
 header
 figures
+chapters/literature.bib
+chapters/rev_history.tex
