@@ -124,3 +124,17 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+# ignore these chapters for this branch
+chapters/chapter1.tex
+chapters/chapter3.tex
+chapters/chapter4.tex
+chapters/chapter5.tex
+chapters/chapter6.tex
+chapters/chapter7.tex
+chapters/chapter8.tex
+chapters/chapter9.tex
+appendix
+header
+src
+
