@@ -309,13 +309,13 @@ Use $\backslash$useyear\{<year>\} to set year.
 
 \newcommand\gmt@firstpagetext{%
   \noindent Use this class with options\\ ``medieteknikk,''
-  ``mediatechnology,'' ``informasjonssikkerhet'' or\\
+  ``mediatechnology,'' ``computerscience,'' ``informasjonssikkerhet'' or\\
   ``informationsecurity''.  
 }
 
 \newcommand\gmt@secondpagetext{%
   \noindent Use this package with options\\ ``medieteknikk,''
-  ``mediatechnology,'' ``informasjonssikkerhet'' or\\
+  ``mediatechnology,''  ``computerscience,'' ``informasjonssikkerhet'' or\\
   ``informationsecurity''.
 }
 
@@ -377,6 +377,17 @@ Use $\backslash$useyear\{<year>\} to set year.
   \renewcommand\gmt@firstpagetext{%
     Master's Thesis Project Description\\
     Master of Science in Information Security\\
+    5 ECTS\\
+    Department of Computer Science and Media Technology\\
+    Gj\o{}vik University College, \gmt@frontpagesyear
+  }
+  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+}
+
+\DeclareOption{computerscience}{%
+  \renewcommand\gmt@firstpagetext{%
+    Master's Thesis Project Description\\
+    Master of Science in Applied Computer Science\\
     5 ECTS\\
     Department of Computer Science and Media Technology\\
     Gj\o{}vik University College, \gmt@frontpagesyear

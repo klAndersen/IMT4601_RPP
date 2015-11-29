@@ -1,0 +1,58 @@
+\chapter{Introduction}
+\label{chapter2:introduction}
+
+\section{Topic covered by the project}
+\label{chapter2:topic}
+The goal of this thesis is to develop an Artificial Intelligent Chat Agent (aka. ChatBot), which will function as a plug-in in the \gls{lms} Open Edx\footnote{Open Edx: \url{https://open.edx.org/}}. This Chat Agent is targeted at students learning programming, and will therefore be used to answer the students questions related to programming. The answers from the Chat Agent will be based on the content found in the online community StackOverflow\footnote{StackOverflow: 
+\url{http://stackoverflow.com/}}. Since StackOverflow is one of the many communities belonging to the StackExchange network\footnote{You can see all the StackExchange communities here: \url{http://stackexchange.com/sites}.}, the Chat Agent can later on be expanded to cover information from other communities.
+\vspace{0.5em}\newline
+The hope is that this Chat Agent can aid the students in their learning progress, since they can ask the Chat Agent questions in the same way they would ask their 
+teacher or their classmate. They do not have to think about keywords or read through a lot text, since the Chat Agent will try to answer their questions based on the answers it finds in the posted answers on StackOverflow.
+\vspace{0.5em}\newline
+From a research perspective, it would be interesting to see if the Chat Agent will have any effect on the learning outcome and what the students think of the Chat Agent, e.g. is it useful or would they just prefer to continue using search engines and look for the answer(s) themself. As for the \gls{ai} side, it would be interesting to see what can be done to "humanize" the Chat Agent so that it could pass the Turing test\footnote{A Turing Test is a test where a human is asked to converse with a unknown party, and then later on decide whether the party was a human or a computer ([p.~2]\cite{RussellAndNorvig2013:AI_ModernApproach}).}. 
+It would also be interesting to look more deeply into the \gls{ai} algorithms, to see in what way they can be improved or extended to cover a larger base of linguistics.
+
+\section{Keywords}
+\label{chapter2:keywords}
+Intelligent Agent, Chatbot, Natural language processing, Human–computer interaction, Education, Question-answering
+
+\section{Problem description}
+\label{chapter2:problem_description}
+Can we find the answer if we do not know the question? The issue with most search engines today is that they are based on taking each search word (the Term) to create what is called a Dictionary (which contains all the words/terms searched for). It then looks through its content (documents, files, multimedia, etc) and searches for each term, and returns those that contain at least one of the terms, ranking the results according to frequency of the given term. Although a given amount of search results is returned, there is no guarantee that the answer searched for are among the returned results. While programming, if an issue occurs, sometimes you can find the answer by using a few keywords, or simply copy/pasting the error message. But what do you search for when your question is more abstract? What do you search for when you have a question, but are struggling with phrasing it in a way that a search engine can understand? What do you do when you have a question that a teacher or a classmate could easily answer, but the search engine cannot?
+\vspace{0.5em}\newline
+With a Chat Agent, you do not have to think about keywords, phrases or "words best describing the problem". You can just ask the question you want an answer to. You also get anonymity with a Chat Agent. You can ask all sorts of questions, no matter how dumb you feel they are, because the Chat Agent is there to help. 
+%% space intended
+
+A keypoint to remember is that the Chat Agent is intended to function as a help tool (e.g. FAQ FINDER \cite{burke1997:FAQfinderSystem} and Bzz 
+\cite{crutzen2011:aiAgentAdolescentQA}), and not as a replacement for the teacher (e.g. CALMsystem \cite{kerly2008:CALMsystem}).
+
+\section{Justification, motivation and benefits}
+\label{chapter2:justification}
+With the advancement of programming and the increase of different languages, libraries and functionality, it can be hard for a teacher to cover all topics. It can also be hard for a student to grasp everything at once and understand everything the code does. Although there is a wast amount of online resources on the 
+Internet, finding what you need can take a lot of time, but when using a Chat Agent, you can just ask the question and get the answer right away. Since the Chat Agent will be based on \gls{hmm}, it can remember everything previously discussed in the conversation, increasing the chance of it helping the student finding the desired answer. The Chat Agent can also help the teachers, e.g. when running exercises in class, students can use the Chat Agent to find answer to the simpler questions, and then ask the teacher for help on the more advanced and problematic issues.
+\vspace{0.5em}\newline
+One example is the paper by (Crutzen et al., 2011) \cite{crutzen2011:aiAgentAdolescentQA} were they used an existing ChatBot called Bzz for answering adolescents' questions related to sex, drugs and alcohol. Their study showed that the users used the ChatBot a lot\footnote{"42,217 conversations with the chatbot; thus, an average of 11.3 conversations with each lasting 3 minutes and 57 seconds" [p.~516]\cite{crutzen2011:aiAgentAdolescentQA}.}, and that the users felt it was faster and better then information lines and search engines. (Knill et al., 2004) \cite{KnillEtAl2004:AiMathCollege} says that a ChatBot can be easier to converse with due to its anonymity. Furthermore, teachers can look at the conversation logs to see what the students have discussed, to be able to map the problems and see how students learn.
+\vspace{0.5em}\newline
+(Kowalski et al., 2013, p.~268) \cite{KowalskiEtAl2013:ChatbotsSecurityTraining} did two case studies where they compared the use of ChatBots and e-learning in relation to Information Security. They measured the ChatBot experience qualitatively, and 70\% of the users found the ChatBot useful and would use one in the future. However, quantitatively they found no significant difference between those using a ChatBot and those using e-learning. CSIEC (documented in \cite{jia2009:csiec}) is a ChatBot developed for learning english, and was tested in \cite{JiaAndRuan2008:CSIEC_caseStudy}. The students achieved a very high score at the exam, but as the authors note, CSIEC was tested only between two tests (and there is also a chance of bias, since one of the authors is also the developer of CSIEC).
+
+\section{Research questions}
+\label{chapter2:research_questions}
+\begin{itemize}
+	\item How was the Chat Agent perceived by the user (e.g. using the Chat Agent vs. using a search engine)?
+	\item Did the Chat Agent help the user understand/learn more about programming?
+	\item By using A/B testing, is there a (statistical) improvement from the students using the Chat Agent, vs. those not using it?
+	\item In a given amount of executed queries, how many correct results were presented to the user? 
+	\item In what way can the conversation pattern (and algorithms used) be improved to pass a Turing test?
+	\item In what way can the technology (i.e. the plug-in) be improved? 
+	\item When retrieving question-answer(s) from StackOverflow, some questions may be closed due to it being a duplicate. 
+	Can this data be used in any way to see what is defined by the StackOverflow community as a "good" question?
+\end{itemize}
+
+\section{Planned contributions}
+\label{chapter2:planned_contribution}
+To create an Artificial Intelligent Chat Agent for \gls{qa} on programming by using StackOverflow as its knowledge base. This chat agent will function as a plug-in in the LMS system Open Edx. The external resources are content accessible on StackOverflow, libraries for content retrieval from StackOverflow, lexical word mappings (e.g. WordNet\footnote{WordNet: \url{https://wordnet.princeton.edu/}}), word filtering (to be decided) and available resources from Open Edx.
+\vspace{0.5em}\newline
+The prototype will be developed in the Advanced Project Course and tested during the Master Thesis. The goal is to see if the Chat Agent can aid students that are learning programming, but also do research on this it (e.g. trying to "humanize" the Chat Agent (Turing Test\footnote{For the record, it should be noted that most ChatBots fail the Turing test, and this is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but I want at least the Chat Agent to be humanoid enough so that the users feel comfortable conversing with it.})). An example of the experiment would be to have two test groups (A/B testing), where the comparison would be on the grades of the students using the Chat Agent vs. those not using it, to see the use had any effect on the students grade.
+\vspace{0.5em}\newline
+Since this is such a narrow and specific field, the Chat Agent will be based on the Artificial Intelligence (AI) algorithms \glsreset{hmm} \gls{hmm} and 
+ \gls{bn}. These are chosen because they have been used for a very long time and there is a great deal of research out there on using these for linguistics and Chat Agents. It could of course be interesting to look at newer or different AI algorithms, but the issue is that these may not have an adequate amount of research and testing in relation to linguistics. It is therefore in my opinion safer to go with \gls{hmm} and  \gls{bn}, to ensure the thesis is finished.

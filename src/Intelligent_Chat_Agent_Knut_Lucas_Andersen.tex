@@ -1,0 +1,66 @@
+%% Header containing packages, etc.
+\input{../header/header}
+
+\begin{document}
+%% Titlepage 
+\input{../header/titlepage}
+\makefrontpages % make the frontpages
+%\thesistitlepage % make the ordinary titlepage
+
+\begin{comment} 
+Front page - including
+"   HIG technical report front page including logos etc.
+"   The text: "MSc project plan"
+"   Title of project
+"   Name of author and contact details
+"   Date
+"   Version
+
+email address
+"   MAIS students must include "NISlab" as their affiliation.
+Date:22.10.2003
+
+Structure of MSc thesis project plan
+Gjøvik University College
+\end{comment}
+
+%% Revision history
+\input{../chapters/rev_history}
+\newpage
+
+%% Abstract
+\input{../header/abstract}
+
+%% Table of contents
+\tableofcontents
+
+%% commented out due to it being description of required content
+%% \input{../chapters/chapter1}
+
+%% the chapters with the content
+\input{../chapters/chapter2}
+
+\input{../chapters/chapter3}
+
+\input{../chapters/chapter4}
+
+\input{../chapters/chapter5}
+
+\input{../chapters/chapter6}
+
+\input{../chapters/chapter7}
+
+\input{../chapters/chapter8}
+
+%% commented out due to it being description of required bibliography
+%% \input{../chapters/chapter9}
+
+%% Appendix
+\input {../appendix/appendix}
+
+%% References/sources
+%\bibliographystyle{plain}
+\bibliographystyle{gucmasterthesis}
+\bibliography{../chapters/literature}
+
+\end{document}

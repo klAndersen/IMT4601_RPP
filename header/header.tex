@@ -1,0 +1,73 @@
+\newcommand{\comment}[1]{}
+
+%\documentclass[a4paper,twocolumn,12pt]{article}
+
+%\documentclass[a4wide,12pt]{report}
+
+%\documentclass[a4wide,12pt]{article}
+\documentclass[computerscience]{gucmasterproject}
+
+%\usepackage{pslatex} %% Doesn't seem to work - i.e. convert .eps to .pdf
+ 
+%% Languages
+\usepackage[utf8]{inputenc} % For utf8 encoded .tex files
+\usepackage[british]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage[pdftex]{graphicx}           % For inclusion of graphics
+
+%From http://math.uib.no/it/tips/
+   %% For grafikk
+    \usepackage{ifpdf}
+    \ifpdf
+      \usepackage[pdftex]{graphicx}
+      \usepackage{epstopdf}
+    \else
+      \usepackage[dvips]{graphicx}
+    \fi
+    %% Her kan du putte dine vanlige pakker og definisjoner
+		
+		%% Graphics and colors
+		\usepackage[svgnames]{xcolor}
+		\usepackage{listings}
+		\usepackage{tikz}
+		\usepackage{color}
+		%% Math Packages
+		\usepackage{amsmath}
+		\usepackage{amsfonts}
+		%% to be able to write multi-line comments, display text "as-is", etc.
+		\usepackage{verbatim}
+		%% used to be able to call the name of the chapter instead of the number
+		\usepackage{nameref}
+		%% to be able to change bulletpoint look in lists
+		\usepackage{enumitem}
+		% acronyms, abbreviations, etc.
+		\usepackage[acronym]{glossaries}
+		\usepackage{makeidx}
+		%% use tikz library for figures, nodes, images, etc.
+		\usetikzlibrary{shapes.geometric,arrows}
+		%% include path for figures, graphics, etc
+		\graphicspath{ {../figures/} }
+		\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg,.bmp}
+		%% decrease size of listing font
+		\lstset{%
+		basicstyle=\ttfamily\footnotesize\bfseries,
+		columns=fullflexible}
+
+%\usepackage[dvips]{hyperref}    % For cross references in pdf
+\usepackage{hyperref}
+\usepackage{mdwlist}
+\usepackage{url}
+\usepackage{here}
+
+\def\UrlFont{\tt}
+
+%% Glossary/acronym list
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{bn}{Bayes Net}{Bayesian network}
+\newacronym{hmm}{HMM}{Hidden Markov Model}
+\newacronym{ir}{IR}{Information Retrieval}
+\newacronym{lms}{LMS}{Learning Management System}
+\newacronym{qa}{Q/A}{Question-Answering}
+% Generate the glossary
+\makeindex
+\makeglossaries
