@@ -9,15 +9,15 @@ The answers from the Chat Agent will be based on the content found in the online
 Since StackOverflow is one of the many communities belonging to the StackExchange network\footnote{You can see all the StackExchange communities here: 
 \url{http://stackexchange.com/sites}.}, the Chat Agent can later on be expanded to cover information from other communities.
 \vspace{0.5em}\newline
-The hope is that this Chat Agent can aid the students in their learning progress, since they can ask the Chat Agent questions in the same way they would ask their 
-teacher or their classmate. They do not have to think about keywords or read through a lot text, since the Chat Agent will try to answer their questions based on the answers it finds 
+The hope is that this Chat Agent can aid the students in their learning progress, since they can ask the Chat Agent questions in the same way they would ask their teacher or 
+their classmate. They do not have to think about keywords or read through a lot text, since the Chat Agent will try to answer their questions based on the answers it finds 
 in the posted answers on StackOverflow.
 \vspace{0.5em}\newline
 From a research perspective, it would be interesting to see if the Chat Agent will have any effect on the learning outcome and what the students think of the Chat Agent, e.g. is it 
-useful or would they just prefer to continue using search engines and look for the answer(s) themself. As for the \gls{ai} side, it would be interesting to see what can be done to
-"humanize" the Chat Agent so that it could pass the Turing test\footnote{A Turing Test is a test where a human is asked to converse with a unknown party, and then later on decide
-whether the party was a human or a computer ([p.~2]\cite{Russell2013}).}. It would also be interesting to look more deeply into the \gls{ai} algorithms, 
-to see in what way they can be improved or extended to cover a larger base of linguistics.
+useful or would they just prefer to continue using search engines and look for the answer(s) themselves. As for the \gls{ai} side, it would be interesting to see what can be done to
+humanize the Chat Agent so that it could pass the Turing test\footnote{A Turing Test is a test where a human is asked to converse with a unknown party, and then later on decide
+whether the party was a human or a computer ([p.~2]\cite{Russell2013}).}. It would also be interesting to look more deeply into the \gls{ai} algorithms, to see in what way they can 
+be improved or extended to cover a larger base of linguistics.
 
 \section{Keywords}
 \label{chapter2:keywords}
@@ -26,7 +26,7 @@ Intelligent Agent, Chatbot, Natural language processing, Human–computer intera
 \section{Problem description}
 \label{chapter2:problem_description}
 Can we find the answer if we do not know the question? The issue with most search engines today is that they are based on taking each search word (the Term) to create what is called 
-a Dictionary (which contains all the words/terms searched for). It then looks through its content (documents, files, multimedia, etc) and searches for each term, and returns those 
+a Dictionary (which contains all the words/terms searched for). It then looks through its content (documents, files, multimedia, etc.) and searches for each term, and returns those 
 that contain at least one of the terms, ranking the results according to frequency of the given term. Although a given amount of search results is returned, there is no guarantee that 
 the answer searched for are among the returned results. While programming, if an issue occurs, sometimes you can find the answer by using a few keywords, or simply copy/pasting the 
 error message. But what do you search for when your question is more abstract? What do you search for when you have a question, but are struggling with phrasing it in a way that a 
@@ -68,7 +68,7 @@ high score at the exam, but as the authors note, CSIEC was tested only between t
 	\item In what way can the conversation pattern (and algorithms used) be improved to pass a Turing test?
 	\item In what way can the technology (i.e. the plug-in) be improved? 
 	\item When retrieving question-answer(s) from StackOverflow, some questions may be closed due to it being a duplicate. 
-	Can this data be used in any way to see what is defined by the StackOverflow community as a "good" question?
+	Can this data be used in any way to see what is defined by the StackOverflow community as a good question?
 \end{itemize}
 
 \section{Planned contributions}
@@ -79,7 +79,7 @@ Open Edx. The external resources are content accessible on StackOverflow, librar
 \vspace{0.5em}\newline
 The Master thesis will be an extension of a prototype currently being developed in IMT5251 Advanced Project Course. This prototype just takes the users question and looks for matches 
 on StackOverflow. The answer that is marked as correct (or the most top-voted one, if no answers are marked) will be returned and displayed to the user. Part of the contribution is to 
-make this prototype more intelligent, by using \gls{ai} and do research on the implemented technology (e.g. trying to "humanize" the Chat Agent (Turing Test\footnote{For the record, it 
+make this prototype more intelligent, by using \gls{ai} and do research on the implemented technology (e.g. trying to humanize the Chat Agent (Turing Test\footnote{For the record, it 
 should be noted that most ChatBots fail the Turing test, and this is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but I want at least the 
 Chat Agent to be humanoid enough so that the users feel comfortable conversing with it.})). Part of the reason for wanting to humanize the Chat Agent is because the target group are 
 students who are learning programming. It would be interesting to see if having this tool available can help them learn and understand more about programming. An attempt to confirm 
@@ -97,6 +97,6 @@ that the Chat Agent can help students ask better questions? An example scenario 
 (presuming the student have no previous knowledge on the topic), a natural question would perhaps be to ask Q1) "What is incrementation?" or Q2) "How to increment?". If you input 
 these questions into StackOverflow, you get approximately 31.600 results for both\footnote{This search was executed 29.11.2015, on StackOverflow.com.}. Furthermore, the first results 
 may not even be relevant. The natural progression would perhaps be then to add to the question "\ldots in programming". This reduces the returned results to 3.083 for Q1, and 2.715 
-for Q2. This example can be extended even further, e.g. by adding the programming language (e.g.: C++), the results are now halfed, with an amount of 1.429 for Q1 and 1.610 for Q2. 
+for Q2. This example can be extended even further, e.g. by adding the programming language (e.g.: C++), the results are now halved, with an amount of 1.429 for Q1 and 1.610 for Q2. 
 This simple example proves that knowing how to phrase a good question can have a real impact of the results you get, and as stated in \cite{Lucky2015}, coming up with a problem can be 
 the hardest part.
