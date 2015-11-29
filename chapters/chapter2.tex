@@ -16,7 +16,7 @@ in the posted answers on StackOverflow.
 From a research perspective, it would be interesting to see if the Chat Agent will have any effect on the learning outcome and what the students think of the Chat Agent, e.g. is it 
 useful or would they just prefer to continue using search engines and look for the answer(s) themself. As for the \gls{ai} side, it would be interesting to see what can be done to
 "humanize" the Chat Agent so that it could pass the Turing test\footnote{A Turing Test is a test where a human is asked to converse with a unknown party, and then later on decide
-whether the party was a human or a computer ([p.~2]\cite{RussellAndNorvig2013:AI_ModernApproach}).}. It would also be interesting to look more deeply into the \gls{ai} algorithms, 
+whether the party was a human or a computer ([p.~2]\cite{Russell2013}).}. It would also be interesting to look more deeply into the \gls{ai} algorithms, 
 to see in what way they can be improved or extended to cover a larger base of linguistics.
 
 \section{Keywords}
@@ -36,8 +36,8 @@ With a Chat Agent, you do not have to think about keywords, phrases or "words be
 with a Chat Agent. You can ask all sorts of questions, no matter how dumb you feel they are, because the Chat Agent is there to help. 
 %% space intended
 
-A keypoint to remember is that the Chat Agent is intended to function as a help tool (e.g. FAQ FINDER \cite{burke1997:FAQfinderSystem} and Bzz \cite{crutzen2011:aiAgentAdolescentQA}), 
-and not as a replacement for the teacher (e.g. CALMsystem \cite{kerly2008:CALMsystem}).
+A keypoint to remember is that the Chat Agent is intended to function as a help tool (e.g. FAQ FINDER \cite{Burke1997} and Bzz \cite{Crutzen2011}), and not as a replacement for the 
+teacher (e.g. CALMsystem \cite{Kerly2008}).
 
 \section{Justification, motivation and benefits}
 \label{chapter2:justification}
@@ -47,17 +47,15 @@ of time, but when using a Chat Agent, you can just ask the question and get the 
 discussed in the conversation, increasing the chance of it helping the student finding the desired answer. The Chat Agent can also help the teachers, e.g. when running exercises in 
 class, students can use the Chat Agent to find answer to the simpler questions, and then ask the teacher for help on the more advanced and problematic issues.
 \vspace{0.5em}\newline
-One example is the paper by \cite{crutzen2011:aiAgentAdolescentQA} were they used an existing ChatBot called Bzz for answering adolescents' questions related to sex, drugs and alcohol. 
-Their study showed that the users used the ChatBot a lot\footnote{"42,217 conversations with the chatbot; thus, an average of 11.3 conversations with each lasting 3 minutes and 57 
-seconds" [p.~516]\cite{crutzen2011:aiAgentAdolescentQA}.}, and that the users felt it was faster and better then information lines and search engines. 
-\cite{KnillEtAl2004:AiMathCollege} says that a ChatBot can be easier to converse with due to its anonymity. Furthermore, teachers can look at the conversation logs to see what the 
-students have discussed, to be able to map the problems and see how students learn.
+One example is the paper by \cite{Crutzen2011} were they used an existing ChatBot called Bzz for answering adolescents' questions related to sex, drugs and alcohol. Their study showed 
+that the users used the ChatBot a lot\footnote{"42,217 conversations with the chatbot; thus, an average of 11.3 conversations with each lasting 3 minutes and 57 seconds" 
+[p.~516]\cite{Crutzen2011}.}, and that the users felt it was faster and better then information lines and search engines. \cite{Knill2004} says that a ChatBot can be easier to converse 
+with due to its anonymity. Furthermore, teachers can look at the conversation logs to see what the students have discussed, to be able to map the problems and see how students learn.
 \vspace{0.5em}\newline
-\cite[p.~268]{KowalskiEtAl2013:ChatbotsSecurityTraining} did two case studies where they compared the use of ChatBots and e-learning in relation to Information Security. They measured 
-the ChatBot experience qualitatively, and 70\% of the users found the ChatBot useful and would use one in the future. However, quantitatively they found no significant difference 
-between those using a ChatBot and those using e-learning. CSIEC (documented in \cite{jia2009:csiec}) is a ChatBot developed for learning english, and was tested in 
-\cite{JiaAndRuan2008:CSIEC_caseStudy}. The students achieved a very high score at the exam, but as the authors note, CSIEC was tested only between two tests (and there is also a chance 
-of bias, since one of the authors is also the developer of CSIEC).
+\cite[p.~268]{Kowalski2013} did two case studies where they compared the use of ChatBots and e-learning in relation to Information Security. They measured the ChatBot experience 
+qualitatively, and 70\% of the users found the ChatBot useful and would use one in the future. However, quantitatively they found no significant difference between those using a 
+ChatBot and those using e-learning. CSIEC (documented in \cite{Jia2009}) is a ChatBot developed for learning english, and was tested in \cite{Jia2008}. The students achieved a very 
+high score at the exam, but as the authors note, CSIEC was tested only between two tests (and there is also a chance of bias, since one of the authors is also the developer of CSIEC).
 \newpage\noindent
 
 \section{Research questions}
@@ -79,13 +77,26 @@ To create an Artificial Intelligent Chat Agent for \gls{qa} on programming by us
 Open Edx. The external resources are content accessible on StackOverflow, libraries for content retrieval from StackOverflow, lexical word mappings (e.g. WordNet\footnote{WordNet: 
 \url{https://wordnet.princeton.edu/}}), word filtering (to be decided) and available resources from Open Edx.
 \vspace{0.5em}\newline
-The prototype will be developed in the Advanced Project Course and tested during the Master Thesis. The goal is to see if the Chat Agent can aid students that are learning programming, 
-but also do research on this it (e.g. trying to "humanize" the Chat Agent (Turing Test\footnote{For the record, it should be noted that most ChatBots fail the Turing test, and this 
-is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but I want at least the Chat Agent to be humanoid enough so that the users feel comfortable 
-conversing with it.})). An example of the experiment would be to have two test groups (A/B testing), where the comparison would be on the grades of the students using the Chat Agent 
-vs. those not using it, to see the use had any effect on the students grade.
+The Master thesis will be an extension of a prototype currently being developed in IMT5251 Advanced Project Course. This prototype just takes the users question and looks for matches 
+on StackOverflow. The answer that is marked as correct (or the most top-voted one, if no answers are marked) will be returned and displayed to the user. Part of the contribution is to 
+make this prototype more intelligent, by using \gls{ai} and do research on the implemented technology (e.g. trying to "humanize" the Chat Agent (Turing Test\footnote{For the record, it 
+should be noted that most ChatBots fail the Turing test, and this is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but I want at least the 
+Chat Agent to be humanoid enough so that the users feel comfortable conversing with it.})). Part of the reason for wanting to humanize the Chat Agent is because the target group are 
+students who are learning programming. It would be interesting to see if having this tool available can help them learn and understand more about programming. An attempt to confirm 
+this will be by having an experiment with two test groups (A/B testing), where the comparison would be on the grades of the students using the Chat Agent vs. those not using it. 
 \vspace{0.5em}\newline
 Since this is such a narrow and specific field, the Chat Agent will be based on the Artificial Intelligence (AI) algorithms \glsreset{hmm} \gls{hmm} and 
 \gls{bn}. These are chosen because they have been used for a very long time and there is a great deal of research out there on using these for linguistics and Chat Agents. It could 
 of course be interesting to look at newer or different AI algorithms, but the issue is that these may not have an adequate amount of research and testing in relation to linguistics. 
-It is therefore in my opinion safer to go with \gls{hmm} and  \gls{bn}, to ensure the thesis is finished.
+It is therefore in my opinion safer to go with \gls{hmm} and \gls{bn}, to ensure completion of the thesis.
+\vspace{0.5em}\newline
+The final part of the planned contribution is to research and analyse the definition of a good question. The StackExchange community has a wide amount of sites, with a high level 
+of professional expertise and strict rules for posting questions. Here, questions can be closed or put on hold, based on the questions asked. Some examples are duplicates, questions 
+that are to broad, or marked off-topic \cite{Stackoverflow.com2015}, \cite{CommunityWiki2015}. By analysing the posted questions and those asked by the students, could it be possible 
+that the Chat Agent can help students ask better questions? An example scenario would be a programming lecture teaching incrementation. For a student wanting to learn more about this 
+(presuming the student have no previous knowledge on the topic), a natural question would perhaps be to ask Q1) "What is incrementation?" or Q2) "How to increment?". If you input 
+these questions into StackOverflow, you get approximately 31.600 results for both\footnote{This search was executed 29.11.2015, on StackOverflow.com.}. Furthermore, the first results 
+may not even be relevant. The natural progression would perhaps be then to add to the question "\ldots in programming". This reduces the returned results to 3.083 for Q1, and 2.715 
+for Q2. This example can be extended even further, e.g. by adding the programming language (e.g.: C++), the results are now halfed, with an amount of 1.429 for Q1 and 1.610 for Q2. 
+This simple example proves that knowing how to phrase a good question can have a real impact of the results you get, and as stated in \cite{Lucky2015}, coming up with a problem can be 
+the hardest part.
