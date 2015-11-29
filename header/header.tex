@@ -39,10 +39,9 @@
 		%% used to be able to call the name of the chapter instead of the number
 		\usepackage{nameref}
 		%% to be able to change bulletpoint look in lists
-		\usepackage{enumerate}
 		\usepackage{enumitem}
 		% acronyms, abbreviations, etc.
-		\usepackage[section,numberedsection=autolabel,acronym]{glossaries}
+		\usepackage[acronym]{glossaries}
 		\usepackage{makeidx}
 		%% use tikz library for figures, nodes, images, etc.
 		\usetikzlibrary{shapes.geometric,arrows}
@@ -62,6 +61,13 @@
 
 \def\UrlFont{\tt}
 
-% Generate the glossary; must be called after hyperref
+%% Glossary/acronym list
+\newacronym{ai}{AI}{Artificial Intelligence}
+\newacronym{bn}{Bayes Net}{Bayesian network}
+\newacronym{hmm}{HMM}{Hidden Markov Model}
+\newacronym{ir}{IR}{Information Retrieval}
+\newacronym{lms}{LMS}{Learning Management System}
+\newacronym{qa}{Q/A}{Question-Answering}
+% Generate the glossary
 \makeindex
 \makeglossaries
