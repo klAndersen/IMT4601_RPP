@@ -2,15 +2,14 @@
 %% APPENDICES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\chapter{Acronyms and abbreviations}
+\chapter{Appendix}
 \label{appendix:acronyms}
 %% acronyms
 \printindex
 \printglossaries
 
-\chapter{IMT5251 Advanced Project Course: Survey}
-\label{appendix:survey}
+% include the first page from the pdf,  and set a section title for this page
+\includepdf[scale=0.8,pages=1,pagecommand={\section{IMT5251 Advanced Project Course: Questionnaire}\label{appendix:questionnaire}}]{questionnaire}
+% include the rest of the pdf without any more titles
+\includepdf[scale=0.8,pages=2-,pagecommand={}]{questionnaire}
 
-
-\chapter{IMT5251 Advanced Project Course: Interview questionnaire format}
-\label{appendix:interview}
