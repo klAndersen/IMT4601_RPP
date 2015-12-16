@@ -11,9 +11,9 @@ Since StackOverflow is one of the many communities belonging to the StackExchang
 \vspace{0.5em}\newline
 The hope is that this Chat Agent can aid the students in their learning progress, since they can ask the Chat Agent questions in the same way they would ask their teacher or 
 their classmate. They do not have to think about keywords or read through a lot text, since the Chat Agent will try to answer their questions based on the answers it finds 
-in the posted answers on StackOverflow.
+on StackOverflow.
 \vspace{0.5em}\newline
-From a research perspective, it would be interesting to see if the Chat Agent will have any effect on the learning outcome and what the students think of the Chat Agent, e.g. is it 
+From a research perspective, it would be interesting to see if the Chat Agent will have any effect on the learning outcome and what the students think of the Chat Agent; e.g. is it 
 useful or would they just prefer to continue using search engines and look for the answer(s) themselves. As for the \gls{ai} side, it would be interesting to see what can be done to
 humanize the Chat Agent so that it could pass the Turing test\footnote{A Turing Test is a test where a human is asked to converse with a unknown party, and then later on decide
 whether the party was a human or a computer ([p.~2]\cite{Russell2013}).}. It would also be interesting to look more deeply into the \gls{ai} algorithms, to see in what way they can 
@@ -21,7 +21,7 @@ be improved or extended to cover a larger base of linguistics.
 
 \section{Keywords}
 \label{chapter2:keywords}
-Intelligent Agent, Chatbot, Natural language processing, Human–computer interaction, Education, Question-answering
+Intelligent Agent, Chatbot, Natural language processing, Human–computer interaction, Education, Question-answering, Hidden Markov Model, Bayesian Networks
 
 \section{Problem description}
 \label{chapter2:problem_description}
@@ -75,24 +75,25 @@ high score at the exam, but as the authors note, CSIEC was tested only between t
 \label{chapter2:planned_contribution}
 To create an Artificial Intelligent Chat Agent for \gls{qa} on programming by using StackOverflow as its knowledge base. This chat agent will function as a plug-in in the LMS system 
 Open Edx. The external resources are content accessible on StackOverflow, libraries for content retrieval from StackOverflow, lexical word mappings (e.g. WordNet\footnote{WordNet: 
-\url{https://wordnet.princeton.edu/}}), word filtering (to be decided) and available resources from Open Edx.
+\url{https://wordnet.princeton.edu/}}), word filtering (if this is needed) and available resources from Open Edx.
 \vspace{0.5em}\newline
-The Master thesis will be an extension of a prototype currently being developed in IMT5251 Advanced Project Course. This prototype just takes the users question and looks for matches 
-on StackOverflow. The answer that is marked as correct (or the most top-voted one, if no answers are marked) will be returned and displayed to the user. Part of the contribution is to 
-make this prototype more intelligent, by using \gls{ai} and do research on the implemented technology (e.g. trying to humanize the Chat Agent (Turing Test\footnote{For the record, it 
-should be noted that most ChatBots fail the Turing test, and this is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but I want at least the 
-Chat Agent to be humanoid enough so that the users feel comfortable conversing with it.})). Part of the reason for wanting to humanize the Chat Agent is because the target group are 
-students who are learning programming. It would be interesting to see if having this tool available can help them learn and understand more about programming. An attempt to confirm 
-this will be by having an experiment with two test groups (A/B testing), where the comparison would be on the grades of the students using the Chat Agent vs. those not using it. 
+The Master thesis will be an extension of a prototype that was developed in IMT5251 Advanced Project Course. This prototype just takes the users question and looks for matches 
+on StackOverflow. The answer that is marked as correct (or the most top-voted one, if no answers are marked) will be returned and displayed to the user. Part of the contribution 
+is to make this prototype more intelligent, by using \gls{ai} and do research on the implemented technology (e.g. trying to humanize the Chat Agent (Turing Test\footnote{For the 
+	record, it 	should be noted that most ChatBots fail the Turing test, and this is extremely hard to achieve. Therefore, being able to pass the test might not be possible, but 
+	I want at least the Chat Agent to be humanoid enough so that the users feel comfortable conversing with it.})). Part of the reason for wanting to humanize the Chat Agent is 
+because the target group are students who are learning programming. It would be interesting to see if having this tool available can help them learn and understand more about 
+programming. An attempt to confirm this will be by having an experiment with two test groups (A/B testing), where the comparison would be on the grades of the students using the 
+Chat Agent vs. those not using it. 
 \vspace{0.5em}\newline
-Since this is such a narrow and specific field, the Chat Agent will be based on the Artificial Intelligence (AI) algorithms \glsreset{hmm} \gls{hmm} and 
-\gls{bn}. These are chosen because they have been used for a very long time and there is a great deal of research out there on using these for linguistics and Chat Agents. It could 
-of course be interesting to look at newer or different AI algorithms, but the issue is that these may not have an adequate amount of research and testing in relation to linguistics. 
-It is therefore in my opinion safer to go with \gls{hmm} and \gls{bn}, to ensure completion of the thesis.
+Since this is such a narrow and specific field, the Chat Agent will be based on the Artificial Intelligence (AI) algorithms \glsreset{hmm} \gls{hmm} and \gls{bn}. These are chosen 
+because they have been used for a very long time, and there is a great deal of research out there on using these for linguistics and Chat Agents. It could of course be interesting 
+to look at newer or different AI algorithms, but the issue is that these may not have an adequate amount of research and testing in relation to linguistics. It is therefore in my 
+opinion safer to go with \gls{hmm} and \gls{bn}, to ensure the thesis will be completed. 
 \vspace{0.5em}\newline
 The final part of the planned contribution is to research and analyse the definition of a good question. The StackExchange community has a wide amount of sites, with a high level 
 of professional expertise and strict rules for posting questions. Here, questions can be closed or put on hold, based on the questions asked. Some examples are duplicates, questions 
-that are to broad, or marked off-topic \cite{Stackoverflow.com2015}, \cite{CommunityWiki2015}. By analysing the posted questions and those asked by the students, could it be possible 
+that are to broad, or marked off-topic \cite{Stackoverflow.com2015,CommunityWiki2015}. By analysing the posted questions and those asked by the students, could it be possible 
 that the Chat Agent can help students ask better questions? An example scenario would be a programming lecture teaching incrementation. For a student wanting to learn more about this 
 (presuming the student have no previous knowledge on the topic), a natural question would perhaps be to ask Q1) "What is incrementation?" or Q2) "How to increment?". If you input 
 these questions into StackOverflow, you get approximately 31.600 results for both\footnote{This search was executed 29.11.2015, on StackOverflow.com.}. Furthermore, the first results 
