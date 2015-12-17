@@ -44,20 +44,18 @@ person, rather then use keywords (as they perhaps would had to when using a sear
 There are numerous scientific articles and reports on using ChatBots in education, which are mentioned in many studies 
  \cite{Crutzen2011,Kerly2008,Knill2004,Kowalski2013,Jia2009,Gulenko,Imran2014,Kerly2007,Reed2011,Rossi2011}. Even though the names and definitions varies e.g.~ChatBot, \gls{vt}, 
 \gls{ia} and \gls{its}, the main purpose is mostly related to either relieving the teacher of work or to aid the user/students to learn more and acquire new knowledge. In the 
-papers by \cite{Kerly2008,Knill2004,Kerly2007} they found that students also wanted the ability to do smalltalk and have off-topic conversations. This would be a useful thing to implement, 
-since this can increase the chance that the students will use the Chat Agent, since it will not be restricted to just the curriculum (e.g. being able to ask about the weather 
-or just random conversations). There can however also be issues with having too free conversations, since users can attempt to use offensive language, invalid input causing 
-the application to hang, spelling/grammatical errors or abuse in some way way (\citet{Kerly2008}). Issues can also come if the knowledge base used is outdated, or is based on resources 
-where there is no proper control of who is adding the information (\citet{Knill2004,Imran2014,Reed2011}).
+papers by \cite{Kerly2008,Knill2004,Kerly2007} they found that students also wanted the ability to do smalltalk and have off-topic conversations. This would be a useful thing 
+to implement, since this can increase the chance that the students will use the Chat Agent, since it will not be restricted to just the curriculum (e.g. being able to ask about 
+the weather or just random conversations). There can however also be issues with having too free conversations, since users can attempt to use offensive language, invalid input 
+causing the application to hang, spelling/grammatical errors or abuse in some way way (\citet{Kerly2008}). Issues can also come if the knowledge base used is outdated, or is based 
+on resources where there is no proper control of who is adding the information (\citet{Knill2004,Imran2014,Reed2011}).
 \vspace{0.5em}\newline
-Granted, StackExchange is based upon knowledge added by users, and can therefore contain both outdated and invalid answers. However, StackExchange consists mostly of professional 
-sites, where both moderators and the members are actively following the posts, both for asked questions and suggested solutions. An example is the ability to mark an answer as 
-the correct (can only be done for one answer), and the ability to give votes (up or down) based on the relevance and correctness of an answer. Taking this into consideration, 
-bad or invalid answers would then in time be naturally filtered out by having a negative score. Furthermore, users also gets reputation based on the posts they make, be it a 
-question, an answer or an comment. This means that if one were to ensure full criticism to retrieved answers, one could set the requirement to only retrieve answers that have 
-a score greater then a given value (at least greater than zero), from users with a given reputation score. This does not account for bad language or attempts to perhaps abuse 
-the Chat Agent in some way. However, all the conversations are logged, meaning that even without a word filter, one could add a setting for the teacher to retrieve questions 
-containing offensive language. One of the issues with word filtering is that words that are not offensive, may be flagged as such (false positives). 
+All information available in the StackExchange community is based on knowledge from the users who posts their answers there. This means that answers can be both outdated and 
+invalid. However, StackExchange consists mostly of professional sites, where both moderators and the members are actively following the all posts, be it questions, answers or 
+comments. Answers can also be graded by giving votes, and the answer that solved the users problem can be marked as correct. This data can then be used to ensure that the 
+solution the Chat Agent presents to the user is based on useful knowledge (e.g. by filtering out answers with votes below a set threshold). An additional filtering can also 
+be added by looking at the users reputation and badges \cite{Stackoverflow.com2015d,Stackoverflow.com2015e,CommunityWiki2015a}. Badges are awarded based on your contribution 
+to the community, whereas reputation represents how much the community trusts you.
 \vspace{0.5em}\newline
 The goal is not for the Chat Agent to function as a \gls{vt}, but more of an aiding tool to help students with the more general problems and help them be better at phrasing 
 their questions. Not only that, but it can also help the teachers to understand how students learn by looking at the questions they ask the Chat Agent (\citet{Knill2004,Rossi2011}). 
@@ -65,8 +63,6 @@ The papers does not list a direct scientific proof that there is a learning impr
 positive impact. As noted in \citet{Kowalski2013}, the quantitative analysis showed no difference between those using and not using a ChatBot, but qualitatively they found that 
 the use of a ChatBot was well received, and were open for using it again in the future.
 
-%% usefulness of chatbots in learning
-%% does it help students learn
 %% partially covers A/B testing, see also next chapter
 
 \section{What is the quality of the results when using \glsentrylong{hmm} (\glsentryshort{hmm}) and \glsentrylong{bn} (\glsentryshort{bn})?}
