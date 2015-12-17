@@ -27,25 +27,34 @@ at the end of the course they can put all the pieces together (the third variabl
 To identify such underlying issues, everyone in the classes that participate will be given surveys to fill out during the thesis. The goal of this survey is to try 
 to find out if there is a correlation between the use of the Chat Agent and the knowledge acquired at the end of the semester. The survey will ask them questions 
 related to their current knowledge level and what experience, if any, they have from before. It is also necessary to find out in what way the different students learn, 
-e.g. by using Fleming's VARK questionnaire\footnote{\url{http://vark-learn.com/the-vark-questionnaire/?p=questionnaire}} (used in \citet[p.~152]{Kowalski2013}). This way, 
+e.g. by using Fleming's VARK questionnaire\footnote{\url{http://vark-learn.com/the-vark-questionnaire/?p=questionnaire}} (used in \citet[p.~152]{Kowalski2013} and 
+\citet{Sarabdeen2013}). This way, 
 I can also try to see if there is a correlation between those that are of the type read/write and their grades at the end.
 \vspace{0.5em}\newline
 It would also be necessary to conduct interviews with participants, to see if there are any issues or variables that the survey has not picked up. \\
-\emph{write more here\ldots}
+\emph{TODO: write more here\ldots}
 
 \section{A/B testing as an experimental method}
 \label{chapter4:ab_testing_experimental}
-\emph{just quick notes to give you an idea whats to be written here} \\
-I'm thinking semi-quasi experiment with randomized selection, so that the selection is not biased in relation to previous knowledge and desired learning outcome of 
-given students
+The students will be dived randomly into two groups; an experimental and a control group. The control group will follow the course the same way the last years students 
+did. The same goes for the experimental group, but in addition they will have access to the Chat Agent. This means that the experiment will be a semi-quasi experiment 
+(\citet[p.~226-248]{Leedy2012} and \citet[p.~114-115]{Ringdal2007}).
 
 \section{\glsentrylong{qa} (\glsentryshort{qa}) model}
 \label{chapter4:qa_model}
-\emph{just quick notes to give you an idea whats to be written here} \\
-e.g. qualitative analysis of the students view on their own ability to ask questions, analysis of the question progress stored, perhaps something about 
+The students ability to ask better questions can be analysed by looking at the questions they ask the Chat Agent. Learning to ask better questions is an iterative 
+process, and by comparing the questions asked in the beginning and the end, it might be possible to see if there is a qualitative improvement in their questions.
+This can also be done quantitatively, by comparing the amount of questions asked before marking the received answer as correct. 
+\vspace{0.5em}\newline
+Since answers will be of various length, long answers will be shortened with a "Read More?". When the user then clicks the "Read More?", the value that this answer 
+was read will be stored in the database. This can then be used as a measurement to see out of all answers retrieved for a given question, how many were of interest 
+to the user (in addition to looking at the answer marked as correct by the Chat Agent user). This can also be used to see how precise and accurate the Chat Agents 
+\gls{ai} is.
 
 \section{Quantitative comparison of the students results}
 \label{chapter4:quantitative_comparison}
-\emph{just quick notes to give you an idea whats to be written here} \\
-comparing the results of all students, to see if those that used the chat agent had better (or greater improvement) in their grades at the end
+How can we see if there is any notable difference in the students results? This can be done by comparing the results against both the students not participating, but 
+also against the students from the previous year. This could be done by using either Analysis of Variation (ANOVA) or Dunnett's test\footnote{	Dunnett's test is effective 
+	when the sample sizes are small, the separate populations are not normally distributed, and their variances are not equal (as determined by separate tests) 
+	(\citet[p.~3]{Simon2011}).}. Dunnett's test was used in \citet{Simon2011} to compare the results of the current students and those from the previous year.
 
