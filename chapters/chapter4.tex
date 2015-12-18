@@ -27,12 +27,16 @@ at the end of the course they can put all the pieces together (the third variabl
 To identify such underlying issues, all participants will be given surveys. The goal of this survey is to try to find out if there is a correlation between the use of the 
 Chat Agent and the knowledge acquired at the end of the semester. The survey will ask them questions related to their current knowledge level, if they have any previous 
 experience with programming and their field of interest\footnote{Since interest level can have an effect on the amount of time the student spends acquiring new knowledge 
-	for that field.}. It is also necessary to find out in what way the different students learn, e.g. by using Fleming's VARK 
+	for that field.}. The basis will be the Likert 5-point scale, and it would be an improvement of the questionnaire used in IMT5251 (shown in Appendix \ref{appendix:questionnaire}, 
+p.~\pageref{appendix:questionnaire}). It is also necessary to find out in what way the different students learn, e.g. by using Fleming's VARK 
  questionnaire\footnote{\url{http://vark-learn.com/the-vark-questionnaire/?p=questionnaire}} (used in \citet[p.~152]{Kowalski2013} and \citet{Sarabdeen2013}). 
 The results of the VARK questionnaire can be used to see if there is a correlation between those that are of the type read/write and their grades at the end.
 \vspace{0.5em}\newline
-It would also be necessary to conduct interviews with participants, to see if there are any issues or variables that the survey has not picked up. \\
-\emph{TODO: write more here\ldots}
+A combination of semi-structured interviews and observations may also prove beneficial (\citet{Fincher2011}). This can be achieved by attending some of the classes, and 
+observe the students when they use the Chat Agent (both for problem-solving and during lectures). Students could then also be randomly selected for follow up interviews 
+based on the observation. The basis of the interview questions would of course be the same as the questions in the survey. This can then be used to see if there are any 
+issues or variables which the survey does not cover. Examples of follow up questions could be explanations ("Why did you do X while using the Chat Agent?"), how often 
+they use the Chat Agent, elaboration on a given topic, or feedback and suggestions for improvement ("What would make you want to use the Chat Agent more?"). 
 
 \section{A/B testing as an experimental method}
 \label{chapter4:ab_testing_experimental}
@@ -42,13 +46,19 @@ will be a semi-quasi experiment (\citet[p.~226-248]{Leedy2012} and \citet[p.~114
 
 \section{\glsentrylong{qa} (\glsentryshort{qa}) model}
 \label{chapter4:qa_model}
-The students ability to ask better questions can be analysed by looking at the questions they ask the Chat Agent. Learning to ask better questions is an iterative 
-process, and by comparing the questions asked in the beginning and the end, it might be possible to see if there is a qualitative improvement in their questions.
-This can also be done quantitatively, by plotting the amount of questions asked before marking the a given answer as correct. 
-\vspace{0.5em}\newline
-The answers will be of varying length, meaning longer answers will be shortened down (with a "Read More?" option). Upon choosing to read more, 
-it will be stored in the database that this answer was read. By measuring the answers that were read, it might be possible to map the relevance of the answers 
-the students get.
+\citet{Mishra2015} presents question posting as a learning mechanism. It consists of two phases; Instruction phase (initial lecture) and Question Posing (QP) phase 
+(clarification or acquire new knowledge based on the seed). This question posting can then be used to create a qualitative analysis based on the following questions:
+\begin{itemize}
+	\item Starting from the first question (seed), is there an improvement in the questions asked 
+	(e.g. amount of questions asked until reaching an answer)?
+	\item Does the students question(s) follow a pattern (e.g. iterative, copying teacher, etc.)?
+	\item Upon reaching an answer, does the student look for more information\footnote{
+		Presented answers will have varying length, and long answers will be shortened with a "Read More?" option.
+		In addition, students will be asked to verify whether or not the currently presented answer answered their question.
+		What could then be done is to check if attempts to acquire new knowledge is made, by comparing the topic of the current 
+		and previous questions after an answer is marked as correct (by also looking at the answers that were read).
+		}?
+\end{itemize}
 
 % This can also be used to see how precise and accurate the Chat Agents \gls{ai} is.
 
@@ -58,3 +68,18 @@ How can we see if there is any notable difference in the students results? This 
 also the results of last years students. The analysis would be based on either Analysis of Variation (ANOVA) or Dunnett's test\footnote{Dunnett's test is effective 
 	when the sample sizes are small, the separate populations are not normally distributed, and their variances are not equal (as determined by separate tests) 
 	(\citet[p.~3]{Simon2011}).}. Dunnett's test was used in \citet{Simon2011} to compare the results of the current students and those from the previous year.
+\vspace{0.5em}\newline
+Students results can also be affected by what type of learning theory the teacher uses. \citet{Kinnunen2007} found in their phenomenographic\footnote{"Phenomenography is a 
+	research approach that is designed 	to elicit the variation in ways of experiencing things on a communal level. The roots of the approach are strongly
+	connected to empirical studies of learning" (\citet[p.~3]{Kinnunen2007}).} study five different categories\footnote{The five categories are: \\
+	Subject: Instructor only presents their material. This is how the students learn. \\
+	Intrinsic: Students quality is based on their own abilities, and is not something the instructor can change. \\
+	Previous experience: The knowledge the student had before starting the course is the reson for their success. \\
+	Attitude/Behaviour: The students investment in the course (e.g. workload, hours, etc.).  \\
+	Developmental: Instructor uses different strategies to encourage learning (e.g. understanding the topic, new ways of thinking, skill usage, etc.)
+	(\citet[p.~5-7]{Kinnunen2007}))
+	} on how instructors understands why students fail and succeed. 
+It could therefore be interesting to also interview the teachers of each course to find out how they teach their course, what their definition of a successful student is, 
+and whether or not they think it is important that they can ask good questions. This could help identify third variable problems in relation to asking good questions. If 
+the teacher is not in the Developmental category, it is a high probability that the teacher does not focus on improving question quality. If this is true for all teachers 
+for a given experimental group, it could imply that for this group, the Chat Agent had an impact on their question quality.
