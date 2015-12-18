@@ -67,44 +67,90 @@ the use of a ChatBot was well received, and were open for using it again in the 
 
 \section{What is the quality of the results when using \glsentrylong{hmm} (\glsentryshort{hmm}) and \glsentrylong{bn} (\glsentryshort{bn})?}
 \label{chapter3:quality_results_hmm_bn}
-\emph{TODO: Write this section}
-%% In a given amount of executed queries, how many correct results were presented to the user? 
+The following is a short introduction to \gls{hmm} and \gls{bn}. Both \gls{hmm} and \gls{bn} is a statistical model. \gls{bn} is a generalization of the Bayesian 
+classifier\footnote{Bayesian classifier calculates conditional probabilities based on the attribute values. It assumes attributes have conditional independence, and 
+	that they are discrete. If they are continuous, they have to be discretized (\citet[p.~7]{Kononenko2007}).}, which uses acyclic graphs to model dependencies. 
+ (\citet[p.~249-256]{Kononenko2007}, \citet{Ghahramani2001}). The nodes\footnote{However, if a given node is at the beginning (no nodes that link to the it), 
+	it is called parent attribute.} in \gls{bn} represents the attribute value, and the edge is the correlation between them. 
+\citet[p.~180]{Mitchell1997} presents a Naive Bayes algorithm for classifying English text on the web with an accuracy of 89\%.
+%% TODO: Write more about tests/accuracy on Bayes Net?
+\vspace{0.5em}\newline
+\gls{hmm}\footnote{If \gls{hmm} only consists of a single state and variable, it is an Dynamic \gls{bn}. Dynamic \gls{bn} is useful if one can reduce the state 
+	to a single variable, or if the states only rely on a single parent. This can then be used to reduce the temporal probability model (\citet[p.~600-601]{Russell2013}). } 
+is based on the Markov model\footnote{The Markov model consists of states that change over time based on probability. The current state decides the probability for the next 
+	one (\cite[p.~3]{Moore}).}, but \gls{hmm} also contains hidden states (\citet{Ghahramani2001, Russell2013}). An example would be the effect weather has on the environment, 
+where the observable states would be whether the ground is wet, dry or frozen, and the hidden states would be sunny, cloudy, rainy and snowy (if the temperature also was a 
+factor to consider, it would be observable). If the weather is sunny or cloudy, the ground will most likely be dry. If the weather is rainy or snowy, the ground could then 
+be both wet and/or frozen (e.g. it rains, and the temperature drops). This could then be used to create a probabilistic model to see what state the ground would be in based 
+on the current weather condition.
+\vspace{0.5em}\newline
+\citet{Gao1999} analysed system errors in the states of \gls{hmm} (for Speech-Recognition), where they found that states could be misclassified (non-aggressive condition) 
+or wrongly enter the space of other states (invasive condition). They found that if there was a large amount of non-aggressive states, a slightly larger Gaussian mixture was 
+better. 
+\vspace{0.5em}\newline
+\citet{Pan2015} developed a \gls{hmm} thesaurus for extracting terms from academic Chinese literature. \citet{Yongjin2009} developed a symbol feature-based \gls{hmm} for English 
+pages using Viterbi algorithm\footnote{Viterbi algorithm can be thought of as Occam's Razor. If transition of states presents the same pattern, then this should be true for all 
+	who match that pattern.}. \citet{Zhou2010} researched the use of \gls{hmm} for information extraction from HTML documents. They found that if you cleaned the HTML data and 
+extracted the data by using the Viterbi algorithm, you would get better extraction results.
+\vspace{0.5em}\newline
+\citet{Barros2008} presents a hybrid \gls{hmm} for information extraction from 6000 references. They tested the \gls{hmm} against four different 
+classifiers\footnote{They used Weka (\url{http://sourceforge.net/projects/weka/}), and the four classifiers were: PART, Naive Bayes, k-Nearest Neighbour (k-NN) and Support Vector 
+	Machine (SVM).}, where they found the average precision of \gls{hmm} and Naive Bayes to be 72.38\% (but k-NN scored highest with 76.15\%; \cite[p.~5]{Barros2008}).
+ \citet{Seymore1999} used \gls{hmm} and the Viterbi algorithm (for recovery of state 
+sequence) to retrieve header information from computer science research papers. They achieved an overall accuracy of 92.9\% for the all classes in the header\footnote{The 
+	class-specific accuracies were 97.8\% for titles and 97.2\% for authors (\cite[p.~6]{Seymore1999}).} 
+\newpage\noindent
+These papers shows that \gls{hmm} is fitting for the purpose of \gls{ir} and information extraction, and that there are different ways this can be achieved. 
+My goal is to use both \gls{hmm} and \gls{bn}, and it will most likely benefit the most from using the Viterbi algorithm (e.g. recover state sequence and improve 
+conversations). Additional extensions could also be added (e.g. Reinforcement learning for improved \gls{ir}) to improve the results given to the user.
 
 \section{Passing a limited Turing test}
 \label{chapter3:turing_test}
 The Turing Test (or Imitation Game) is based on the paper by \citet{Turing1998}. In this paper, Turing discusses whether or not a machine can be defined as intelligent, and to 
 what ends the intelligence can be measured as. The original Imitation game was based on a man, a woman and a judge, where the goal was for the judge to guess which gender belonged 
-to which participant. Turings suggestion was to alter this test to then include a human, a machine and a judge, where the judge would decide whether or not he was talking to a 
+to which participant. Turings suggestion was to alter this test to instead include a human, a machine, and a judge, where the judge would decide whether or not he was talking to a 
 human or machine. However, \citet{Harnad2000} argues that the Turing Test is outdated and that a machine easily can trick another human into passing the test. Harnad therefore 
-defines five levels\footnote{The levels are t1: "Toy" functionality, T2: Pen-pal function, T3: Sensors and motoric (e.g. robot), T4: Humanoid in both looks and appearance and 
-	T5: Grand Unified Theory of Everything (\citet{Harnad2000}).} for the Turing test, where the level starts with t1 ("toy" functionality) and goes up to T5 (Grand Unified Theory 
-of Everything). 
-Based on Harnads paper, for a ChatBot it would be sufficient to pass T2.
+defines five levels\footnote{The levels are t1: "Toy" functionality, T2: Pen-pal function (e.g. ChatBot), T3: Sensors and motoric (e.g. robot), T4: Humanoid (in both looks and 
+	appearance) and T5: Grand Unified Theory of Everything (\citet{Harnad2000}).} for the Turing test, where the level starts with t1 ("toy" functionality) and goes up to T5 
+(Grand Unified Theory of Everything). Based on Harnads paper, for my Chat Agent it would be sufficient to pass T2.
 \vspace{0.5em}\newline
 Today, the Loebner Contest has replaced the Turing test (\citet{Shieber1994,Zdenek2001}). In the Loebner Contest, the contestants are graded on a numeric scale, where those that 
 gets the highest score are perceived as most human-like. The winner was the one with the highest average score. The question however is if these types of tests truly can judge 
-intelligence, since most of the time, it is all about the illusion of intelligence (\citet{Livingstone2006, Shieber1994}). Furthermore, often when attempting to reply by using 
-the users input as base, it can often produce weird sentences (\citet[p.~6]{Shieber1994}). To account for the lack of intelligence in the beginning, the judges had a script they 
-had to stick to, but today the conversations can easily go out of proportions (\citet[p.~13]{Zdenek2001}).
+intelligence, since most of the time, it is all about the illusion of intelligence (\citet{Livingstone2006, Shieber1994}). The ChatBots could also end up creating weird 
+sentences when basing their output on the users input (e.g. \citet[p.~6]{Shieber1994}). In the early days, the judges had to stick to a given script, but today the conversations 
+can easily go out of proportions (\citet[p.~13]{Zdenek2001}).
 \vspace{0.5em}\newline
-In summary, to pass a limited Turing test (e.g. Loebner Contest) it is all about whether or not you can fool the judge. Not about the intelligence. However, intelligence is not 
-a key element in the Chat Agent, as most of the "intelligence" will be directed towards giving the students answers that are relevant and meaningful. Considering the goal is 
-only to present meaningful answers, the students may be more forgiving when it comes to the probability of being presented with weirdly constructed sentences.
+Trying to pass a limited Turing test (e.g. Loebner Contest) seems to be more about fooling the judges by providing meaningful answers, rather then displaying intelligence. It is 
+debatable whether or not my Chat Agent needs to pass such a test, considering the students already know that they are talking to a Chat Agent and not a real person\footnote{An 
+	interesting experiment (as a continuation after the thesis, for the next years students) would be to tell the experimental group that they are 
+	testing out a new \gls{qa} system (where they can get help from a domain expert). This group could then be expanded into two, where the first half is talking to a real 
+	person and the other half is talking to the Chat Agent. This could then be used to compare the accuracy of the answers provided by the Chat Agent vs. the person, in addition 
+	to the students at the end being asked to judge whether they talked to a real person (e.g. a teacher) or the Chat Agent. To avoid bias, this should be executed as a double 
+	blind.}.
+Although the conversations should be as humanoid as possible, the most important part is that the answers are meaningful and relevant to the students questions.
+\vspace{0.5em}\newline
+One could of course separate the conversation pattern into two parts; one for the \gls{qa} and the other for small-talk/off-topic conversations. However, the small-talk would  
+not be a priority, so if this were to be added in the first release (mid-February), it would need to be initiated through a command. This command could then later be replaced by 
+using semantics to separate between \gls{qa} and small-talk. If small-talk was a feature the students wanted to see more of, improvements could then be made by asking them for 
+suggestions and feedback. E.g.~What do you think of the conversations? In what ways can the conversations be improved? etc.
 
 \section{\glsentrylong{qa} (\glsentryshort{qa}): What defines a good question?}
 \label{chapter3:define_good_question}
-Question can be defined in many ways (e.g. a subject-related, situational, research/thesis, etc) (\citet[p.~3]{Boyer2010}). The main focus is on the academical questions, e.g. 
-valid questions when writing the problem statement for the Bachelor or Master thesis. Basically questions of a level to be expected when pursuing an academical degree. 
-StackOverflow alone has a lot of pages of how questions should and should not be phrased  \cite{Stackoverflow.com2015,CommunityWiki2015,Stackoverflow.com2015a,Stackoverflow.com2015b,Stackoverflow.com2015c}. 
+Question can be defined in many ways (e.g. a subject-related, situational, research/thesis, etc) (\citet[p.~3]{Boyer2010}). The focus of my Master thesis are questions on an 
+academic level (Bachelor and Master). StackOverflow has several pages with guidelines for asking (good) questions 
+ \cite{Stackoverflow.com2015,CommunityWiki2015,Stackoverflow.com2015a,Stackoverflow.com2015b,Stackoverflow.com2015c}. 
+ \vspace{0.5em}\newline
 \citet{Lezina2013} attempted to predict closed questions on StackOverflow by analysing a database dump\footnote{You can also download all data available on StackExchange through 
 	the BitTorrent link found here: \url{https://archive.org/details/stackexchange} (last accessed \today).}, but they noted that it would be too time consuming to analyse 
 everything. \citet{Slowiaczek1992} researches hypothesis testing, and what defines a good question and answer when you are restricted to only yes and no answers.
 \vspace{0.5em}\newline
 \citet{Ragonis2013} analysed problem-solving question which were sorted into categories and keywords. This can be used to see if it will be possible to create a taxonomy for 
-questions. \citet{Boyer2010} analysed how to encourage problem-solving in students, where they should starting with thinking about whether or not they understand the problem, 
-before they attempt to find a solution. They also introduce new ways for instructors to ask questions to help students understand whether or not they understand the current task 
-they are given. This can be useful when analysing the questions students asked compared to questions teachers ask. If the student uses an existing question from edX (asked by the 
-teacher), presuming that a valid answer is not given, in what way will the student then re-phrase their question in an attempt to find the answer? 
+questions (as was done in \citet{Nielsen2008}). \citet{Boyer2010} analysed how to encourage problem-solving in students. One of their findings was that students should start with 
+thinking about whether or not they understand the problem, before attempting to find a solution. \citet{Boyer2010} also suggests that instructors should start by asking 
+questions to see if the students truly understand the task they are given. 
+
+This can be useful when analysing the students questions, since I can compare their questions against those from the edX course. E.g.~if the student starts with asking a question 
+taken from an edX course (assuming an answer is not found), in what way will the student phrase their question to find the answer? 
 \vspace{0.5em}\newline
 By having the Chat Agent as an alternative to the teachers, the students can also improve their own question quality. Students may feel that the question they ask is wrong, too 
 stupid, or fear that may be ridiculed when asking it. Through the anonymity of the Chat Agent, they can ask the question in whatever form they want. The answer they get will be 
