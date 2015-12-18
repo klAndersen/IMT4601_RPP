@@ -20,7 +20,7 @@ The threats to the causality in my thesis is mostly the students maturity. In th
 the end of the Spring semester, they will have acquired more understanding and knowledge on the given subjects. Their improvement in asking questions can also be 
 affected by their supervisors (e.g. through the iterative process of asking questions, they learn to be more specific when asking for help). Previous knowledge from 
 before the Bachelor started can also have an impact. Students with background in programming, be it self-taught or through work may know the basics, but its first 
-at the end of the course they can put all the pieces together (the third variable problem). 
+at the end of the course they can put all the pieces together (the third variable problem) (\citet{Tafliovich2013}). 
 
 \section{Survey and Interview}
 \label{chapter4:survey_and_interview}
@@ -31,7 +31,7 @@ experience with programming and their field of interest\footnote{Since interest 
 p.~\pageref{appendix:questionnaire}). It is also necessary to find out in what way the different students learn, e.g. by using Fleming's VARK 
  questionnaire\footnote{\url{http://vark-learn.com/the-vark-questionnaire/?p=questionnaire}} (used in \citet[p.~152]{Kowalski2013} and \citet{Sarabdeen2013}). 
 The results of the VARK questionnaire can be used to see if there is a correlation between those that are of the type read/write and their grades at the end.
-\vspace{0.5em}\newline
+\newpage\noindent
 A combination of semi-structured interviews and observations may also prove beneficial (\citet{Fincher2011}). This can be achieved by attending some of the classes, and 
 observe the students when they use the Chat Agent (both for problem-solving and during lectures). Students could then also be randomly selected for follow up interviews 
 based on the observation. The basis of the interview questions would of course be the same as the questions in the survey. This can then be used to see if there are any 
@@ -59,7 +59,6 @@ will be a semi-quasi experiment (\citet[p.~226-248]{Leedy2012} and \citet[p.~114
 		and previous questions after an answer is marked as correct (by also looking at the answers that were read).
 		}?
 \end{itemize}
-
 % This can also be used to see how precise and accurate the Chat Agents \gls{ai} is.
 
 \section{Quantitative comparison of the students results}
@@ -67,7 +66,9 @@ will be a semi-quasi experiment (\citet[p.~226-248]{Leedy2012} and \citet[p.~114
 How can we see if there is any notable difference in the students results? This can be achieved by not only comparing the results of the experimental and control group, but 
 also the results of last years students. The analysis would be based on either Analysis of Variation (ANOVA) or Dunnett's test\footnote{Dunnett's test is effective 
 	when the sample sizes are small, the separate populations are not normally distributed, and their variances are not equal (as determined by separate tests) 
-	(\citet[p.~3]{Simon2011}).}. Dunnett's test was used in \citet{Simon2011} to compare the results of the current students and those from the previous year.
+	(\citet[p.~3]{Simon2011}).}. Dunnett's test was used in \citet{Simon2011} to compare the results of the current students and those from the previous year. 
+\citet{Tafliovich2013} combined the quantitative results (the grades) previous experience to see if this had any effect on their grades (they used Wilcoxon rank-sum test 
+to compare the median of students with and without previous experience).
 \vspace{0.5em}\newline
 Students results can also be affected by what type of learning theory the teacher uses. \citet{Kinnunen2007} found in their phenomenographic\footnote{"Phenomenography is a 
 	research approach that is designed 	to elicit the variation in ways of experiencing things on a communal level. The roots of the approach are strongly
@@ -77,9 +78,24 @@ Students results can also be affected by what type of learning theory the teache
 	Previous experience: The knowledge the student had before starting the course is the reson for their success. \\
 	Attitude/Behaviour: The students investment in the course (e.g. workload, hours, etc.).  \\
 	Developmental: Instructor uses different strategies to encourage learning (e.g. understanding the topic, new ways of thinking, skill usage, etc.)
-	(\citet[p.~5-7]{Kinnunen2007}))
+	(\citet[p.~5-7]{Kinnunen2007})
 	} on how instructors understands why students fail and succeed. 
 It could therefore be interesting to also interview the teachers of each course to find out how they teach their course, what their definition of a successful student is, 
 and whether or not they think it is important that they can ask good questions. This could help identify third variable problems in relation to asking good questions. If 
 the teacher is not in the Developmental category, it is a high probability that the teacher does not focus on improving question quality. If this is true for all teachers 
 for a given experimental group, it could imply that for this group, the Chat Agent had an impact on their question quality.
+
+\section{Short summary of the process}
+\label{chapter4:the_process}
+\begin{enumerate}
+	\item Develop the \gls{ai} for the Chat Agent
+	\item Randomly distribute students into control and experimental group
+	\item Have all students complete an introductory, mid-term and end-term survey
+	\item Observe students during class and interview students after observation
+	\item Analysing questions found on StackOverflow (e.g. \citet{Movshovitz-Attias2013})
+	\item Analysing the questions asked by students by looking the quantity 
+	(amount of questions asked, amount of answers read, amount of answers marked as correct)
+	\item Interview teachers to draw conclusions on their learning style
+	\item Analyse the students results at the end by looking at variables 
+	(e.g. grades, previous experience, teachers learning style, interests, questions asked)
+\end{enumerate}
